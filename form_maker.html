@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <style>
+        .btn-circle.btn-xl {
+        width: 70px;
+        height: 70px;
+        padding: 10px 16px;
+        border-radius: 35px;
+        font-size: 24px;
+        line-height: 1.33;
+    }
+
+    .btn-circle {
+        width: 30px;
+        height: 30px;
+        padding: 6px 0px;
+        border-radius: 15px;
+        text-align: center;
+        font-size: 12px;
+        line-height: 1.42857;
+    }
+
+    footer {
+      background: #e0f2f7;
+<!--      position: absolute;-->
+      bottom: 0;
+      width: 100%;
+    }
+
+    .option {
+        border-radius:20px;
+        margin: 5px;
+    }
+
+    .badge{
+        background-color: #8a8d90;
+    }
+
+    .question{
+        color:#454a40;
+    }
+
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-dark bg-dark"  style="background:#38D39F !important ">
+      <div class="col-4">
+          <img src="icon.png" style="height:33px"/>&nbsp&nbsp
+          <a class="navbar-brand" href="#" style="float:align-left">Spaghetti lawyers</a>
+      </div>
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample01" aria-controls="navbarsExample01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExample01">
+      </div>
+    </nav>
+<div class="container" style="align-middle; margin-top:20px; height:80vh" >
+
+    <div class="">
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col">
+            <div class="row justify-content-center text-center">
+                <h2>Na ile prawdopodobne jest, że polecisz <br>naszą kancelarię?</h2>
+                <br/>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+     <div class="row justify-content-center">
+
+        <button type="button" class="btn btn-circle btn-xl" style="background:#FF0000; margin:5px;" onclick="showOptions()">1
+        </button>
+        <button type="button" class="btn btn-circle btn-xl" style="background:#FF3300; margin:5px;" onclick="showOptions()">2
+        </button>
+        <button type="button" class="btn btn-circle btn-xl" style="background:#FF6600; margin:5px;" onclick="showOptions()">3
+        </button>
+        <button type="button" class="btn btn-circle btn-xl" style="background:#FF9900; margin:5px;" onclick="showOptions()">4
+        </button>
+        <button type="button" class="btn btn-circle btn-xl" style="background:#FFCC00; margin:5px;" onclick="showOptions()">5
+        </button>
+        <button type="button" class="btn btn-circle btn-xl" style="background:#FFFF00; margin:5px;" onclick="showOptions()">6
+        </button>
+        <button type="button" class="btn btn-circle btn-xl" style="background:#CCFF00; margin:5px;" onclick="showOptions2()">7
+        </button>
+        <button type="button" class="btn btn-circle btn-xl" style="background:#99FF00; margin:5px;" onclick="showOptions2()">8
+        </button>
+        <button type="button" class="btn btn-circle btn-xl" style="background:#33FF00; margin:5px;" onclick="showOptions3()">9
+        </button>
+        <button type="button" class="btn btn-circle btn-xl" style="background:#00FF00; margin:5px;" onclick="showOptions3()">10
+        </button>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="row justify-content-center">
+    <div class="card" id="dalje" style="width:75%;display:none">
+      <div class="card-body">
+        <p style="color:#7b7b7b ">
+            <img src="comm.png" style="height:33px"/>
+            Co zadecydowało o Twojej ocenie?
+        </p>
+        <span class="btn btn-light btn-outline-secondary option" onclick="showQuestions()">Problem z komunikacją</span>
+        <span class="btn btn-light btn-outline-secondary option">Problem z dotrzymywaniem terminów</span>
+          <span class="btn btn-light btn-outline-secondary option">Za wysoka cena usług</span>
+        <span class="btn btn-light btn-outline-secondary option">Problem z dostępności prawników</span>
+        <span class="btn btn-light btn-outline-secondary option">Brak biznesowego podejścia</span>
+        <span class="btn btn-light btn-outline-secondary option">inne...</span>
+      </div>
+
+      <div id="daljedalje" class="card-body">
+      </div>
+    </div>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="card" id="dalje2" style="width:75%;display:none">
+        <div id="daljedalje2" class="card-body">
+              <div class="question">
+                  <p><span class="badge badge-pill badge-secondary">1</span><span class="question">  Jaka jest jedna rzecz, którą powinniśmy poprawić w przyszłości?</span></p>
+                  <textarea class="form-control"  style="height:80px"></textarea>
+                  <br>
+              </div>
+              <div class="btn btn-secondary">Submit</div>
+          </div>
+        </div>
+    </div>
+
+
+    <div class="row justify-content-center">
+        <div class="card" id="dalje3" style="width:75%;display:none">
+        <div id="daljedalje3" class="card-body">
+              <div class="question">
+                  <p><span class="badge badge-pill badge-secondary">1</span><span class="question">  Co jest naszym największym atutem?</span></p>
+                  <textarea class="form-control"  style="height:80px"></textarea>
+                  <br>
+              </div>
+              <div class="btn btn-secondary">Submit</div>
+        </div>
+    </div>
+    </div>
+    <br>
+</div>
+<footer>
+    <div class="footer-bottom text-center" style="background-color:#38D39F!important; height:40px">
+
+        <small class="copyright" style="color:white">Copyright @2019 SpaghettiLawyers</small>
+    </div>
+</footer>
+
+<script>
+    function showOptions()
+    {
+        $("#dalje2").css("display", "none");
+        $("#dalje3").css("display", "none");
+        $("#dalje").css("display", "block");
+    }
+
+    function showQuestions()
+    {
+        $("#daljedalje").html(
+        '<div class="question"><p><span class="badge badge-pill badge-secondary">1</span><span class="question">  Czego Ci brakowało lub co Cię rozczarowało w komunikacji z nami?</span></p><textarea class="form-control"  style="height:80px"></textarea><br></div><div class="question"><p><span class="badge badge-pill badge-secondary">2</span><span class="question">  Co według Ciebie powinniśmy poprawić aby w przyszłości uzyskać lepszą ocenę?</span></p><textarea class="form-control"  style="height:80px"></textarea><br><div class="btn btn-secondary">Submit</div><br></div>'
+        );
+    }
+
+    function showOptions2()
+    {
+        $("#dalje").css("display", "none");
+        $("#dalje3").css("display", "none");
+        $("#dalje2").css("display", "block");
+    }
+
+    function showOptions3()
+    {
+        $("#dalje").css("display", "none");
+        $("#dalje2").css("display", "none");
+        $("#dalje3").css("display", "block");
+    }
+
+</script>
+
+</body>
+</html>
